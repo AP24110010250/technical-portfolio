@@ -581,6 +581,126 @@ document.addEventListener('DOMContentLoaded', () => {
             links: [
                 { label: 'GitHub Repository', url: 'https://github.com/AP24110010250/sales-and-inventory-with-flask-and-gui.git', type: 'code', icon: 'fa-brands fa-github' }
             ]
+        },
+
+        'course-registration-system': {
+            title: 'Course Registration Management System',
+            category: 'Relational Database Management System (RDBMS) & SQL',
+            tagline: 'Production-grade 3NF normalized relational database featuring stored procedures, capacity-guard triggers, and analytical reporting views.',
+            summary: 'A complete, enterprise-ready relational database architecture designed for academic course registration and student enrollment management. Built in compliance with Third Normal Form (3NF) principles, it enforces referential integrity through foreign key cascades, checks live course seat capacities via active triggers and defensive stored procedures, and provides instant analytics through pre-computed database views.',
+            screenshots: [],
+            techStack: {
+                'Database Engines': ['MySQL 8.0+', 'PostgreSQL Compatible', 'Relational DBMS'],
+                'Relational Architecture': ['Third Normal Form (3NF)', 'Entity-Relationship Model', 'Junction Tables (M:N Bridge)'],
+                'Programmability': ['Stored Procedures', 'Triggers (Capacity Guard)', 'Re-usable Views', 'ACID Transactions'],
+                'Integrity & Security': ['Foreign Keys (CASCADE)', 'Check Constraints', 'Compound Unique Constraints', 'SQLSTATE Signals']
+            },
+            features: [
+                {
+                    title: '3NF Normalized Schema',
+                    desc: 'Eliminates insertion, update, and deletion anomalies across Students, Courses, and junction Registrations tables.',
+                    icon: 'fa-sitemap'
+                },
+                {
+                    title: 'Automated Seat Capacity Guard',
+                    desc: 'Database trigger (trg_check_capacity) fires BEFORE INSERT to automatically prevent over-enrollment when maximum capacity is reached.',
+                    icon: 'fa-shield-halved'
+                },
+                {
+                    title: 'Defensive Stored Procedures',
+                    desc: 'Pre-compiled RegisterStudent and DropCourse procedures with parameterized inputs, capacity validation, and output status messages.',
+                    icon: 'fa-gears'
+                },
+                {
+                    title: 'Soft-Delete Course Dropping',
+                    desc: 'Safely transitions enrollment records to "dropped" status, preserving complete audit trails and registration timestamps.',
+                    icon: 'fa-user-xmark'
+                },
+                {
+                    title: 'Analytical Reporting Views',
+                    desc: 'Pre-computed vw_course_summary and vw_student_transcript views provide instant capacity fill percentages and student academic records.',
+                    icon: 'fa-chart-pie'
+                },
+                {
+                    title: 'Advanced Aggregation Queries',
+                    desc: 'Multi-table JOINs, conditional COUNT(CASE ...), HAVING filters, and capacity utilization analytics.',
+                    icon: 'fa-chart-line'
+                }
+            ],
+            contributions: [
+                'Designed a complete 3NF normalized relational schema for university-level student course enrollment.',
+                'Implemented automated capacity checking with database triggers that raise custom SQLSTATE exceptions.',
+                'Authored reusable stored procedures handling parameterized enrollment and safe course drops.',
+                'Created analytical views and complex queries tracking course fill rates (>70%) and identifying unassigned students.',
+                'Published complete schema and documentation to GitHub with detailed ER diagrams and usage guides.'
+            ],
+            metrics: [
+                { val: '3NF', label: 'Normalized Schema' },
+                { val: '100%', label: 'Constraint Coverage' },
+                { val: 'Triggers & SPs', label: 'Capacity Guard' },
+                { val: 'Multi-Table', label: 'Relational Joins' }
+            ],
+            links: [
+                { label: 'GitHub Repository', url: 'https://github.com/AP24110010250/course-registration-management-system.git', type: 'code', icon: 'fa-brands fa-github' }
+            ]
+        },
+
+        'cpp-auth-system': {
+            title: 'C++ Secure Authentication System',
+            category: 'Systems Programming & Cybersecurity',
+            tagline: 'Terminal-based user authentication system in C++ with flat-file database storage and input validation.',
+            summary: 'A secure, terminal-based user authentication application engineered in C++ using the Standard Template Library (STL). It demonstrates foundational cybersecurity concepts and robust file I/O operations by implementing user registration with duplicate checks, credential validation, password updating, and account deletion with persistent flat-file database storage.',
+            screenshots: [
+                { url: 'info for portfolio/authentication-system/01_terminal_output.jpg', caption: 'Terminal main menu interface with CLI navigation' }
+            ],
+            techStack: {
+                'Core Language': ['C++17', 'Standard Template Library (STL)', 'i/o streams'],
+                'Storage Engine': ['Flat-File Database (`users.db`)', 'File Parsing & Serialization'],
+                'Security': ['Input Sanitization', 'Credential Validation', 'Collision Prevention'],
+                'Interface': ['Command Line Interface (CLI)', 'Interactive Menu Loop']
+            },
+            features: [
+                {
+                    title: 'Account Creation & Unique Guard',
+                    desc: 'Registers new users with strict uniqueness checking, preventing duplicate username collisions in the database.',
+                    icon: 'fa-user-plus'
+                },
+                {
+                    title: 'Secure Authentication Loop',
+                    desc: 'Validates credentials against stored flat-file records and grants interactive authenticated session privileges.',
+                    icon: 'fa-key'
+                },
+                {
+                    title: 'Password Management',
+                    desc: 'Allows authenticated users to securely update their passwords with file re-writing and integrity preservation.',
+                    icon: 'fa-lock'
+                },
+                {
+                    title: 'Account Deletion CRUD',
+                    desc: 'Completely purges user credentials from the system file with safe temporary file swapping.',
+                    icon: 'fa-user-minus'
+                },
+                {
+                    title: 'Modular Multi-File Architecture',
+                    desc: 'Cleanly split into separate header and implementation files for authentication, password changes, and utilities.',
+                    icon: 'fa-cubes'
+                }
+            ],
+            contributions: [
+                'Engineered a complete modular CLI application in C++ without external library dependencies.',
+                'Implemented robust file I/O operations for creating, reading, updating, and deleting user records.',
+                'Built defensive input validation routines preventing buffer overflows and invalid character inputs.',
+                'Organized codebase into clean header (.h) and implementation (.cpp) modules with comprehensive error handling.'
+            ],
+            metrics: [
+                { val: '100% C++', label: 'Standard STL' },
+                { val: 'Full CRUD', label: 'Data Management' },
+                { val: 'Zero Deps', label: 'Pure C++ Standard' },
+                { val: 'Modular', label: 'Separated Headers' }
+            ],
+            links: [
+                { label: 'GitHub Repository', url: 'https://github.com/AP24110010250/authentication-system.git', type: 'code', icon: 'fa-brands fa-github' }
+            ]
         }
     };
 
@@ -1124,4 +1244,38 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // ==========================================
+    // 8. MOBILE NAVIGATION MENU TOGGLE
+    // ==========================================
+    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+    const navMenu = document.getElementById('navMenu');
+
+    if (mobileMenuToggle && navMenu) {
+        mobileMenuToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const isOpen = navMenu.classList.toggle('open');
+            mobileMenuToggle.classList.toggle('active', isOpen);
+            mobileMenuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+
+        // Close mobile menu when any nav link is clicked
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('open');
+                mobileMenuToggle.classList.remove('active');
+                mobileMenuToggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!navMenu.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
+                navMenu.classList.remove('open');
+                mobileMenuToggle.classList.remove('active');
+                mobileMenuToggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+    }
+
 });
+
